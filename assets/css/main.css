@@ -3331,7 +3331,7 @@
 			background-color: #1E2832;
 			color: rgba(255, 255, 255, 0.75);
 			background-attachment: fixed;
-			background-image: url("https://raw.githubusercontent.com/nsstrandberg/nsstrandberg.github.io/master/images/header.jpg");
+			background-image: url("images/overlay.png"), url("images/header.jpg");
 			background-size: cover;
 		}
 
