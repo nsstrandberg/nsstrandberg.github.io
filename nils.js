@@ -6,6 +6,8 @@ var data = {
 var options = {
   labelInterpolationFnc: function(value) {
     return value[0]
+  width: 400,
+  height: 400
   }
 };
 
