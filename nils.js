@@ -1,5 +1,5 @@
 var data = {
-  labels: ['Sweden Other jobs', 'developer 4%', 'UX 1%', 'ProdDev 7%'],
+  labels: ['Other', 'developer 4%', 'UX 1%', 'ProdDev 7%'],
   series: [11787, 533, 68, 937]
 };
 
