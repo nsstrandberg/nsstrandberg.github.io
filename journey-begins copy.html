@@ -15,8 +15,29 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	    	
 	    <!--[chartlist JS code[endif]-->
-	    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-        <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+	    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Other',     11787],
+          ['Prod Dev',    937],
+          ['Developer',   533],
+          ['UX',          231],
+          ['Coder',        68]
+        ]);
+
+        var options = {
+          title: '% of jobs requiring coding on LinkedIn',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>	
 	    <!--[chartlist JS code[endif]-->
 	</head>
 	<body>
@@ -41,7 +62,7 @@
 				<div class="container">
 
 					<header class="major special">
-						<h2>THE JURNEY BEGINS HERE!</h2>
+						<h2>THE JOURNEY BEGINS HERE!</h2>
 						<p>What is the real need for coders in the world and why you should learn it</p>
 					</header>
 					<p><strong>Lets get real, only a 12% of the population knows how to code. It doestn sound like much does it?. Now consider this... how much of todays jobs, require or would be a plus to be able to code?. The number of jobs posted in sweden (linkedin) on October 7th 2015 are: 3,556</p>
@@ -51,7 +72,7 @@
                    <p>231  UX</p>
                    <p>68   Coder</p>
 
-                 <div class="ct-chart"></div>
+                  <div id="donutchart" style="width: 900px; height: 500px;"></div>
 				</div>
 			</section>
 
@@ -86,6 +107,5 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-        <script type="text/javascript" src="nils.js"></script>
 	</body>
 </html>
